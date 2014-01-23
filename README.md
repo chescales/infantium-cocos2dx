@@ -28,21 +28,21 @@ Some info about how to integrate:
 
 4. Add to Activity new method:
 
-``````````````````java
-public JSONObject infantium_easyNDK(JSONObject params) {
-    Log.v("infantium_easyNDK", "infantium_easyNDK called");
-    Log.v("infantium_easyNDK", "Passed params are : " + params.toString());
-    JSONObject retParams = InfantiumBridge.dispatchNDKCall(params);
-
-    try {
-        Log.v("infantium_easyNDK", "Returned Params params are : " + retParams.toString());
-    }
-    catch (NullPointerException e) {
-        Log.v("infantium_easyNDK", "returned null params");
-    }
-    return retParams;
-}
-``````````````````
+  ``````````````````java
+  public JSONObject infantium_easyNDK(JSONObject params) {
+      Log.v("infantium_easyNDK", "infantium_easyNDK called");
+      Log.v("infantium_easyNDK", "Passed params are : " + params.toString());
+      JSONObject retParams = InfantiumBridge.dispatchNDKCall(params);
+  
+      try {
+          Log.v("infantium_easyNDK", "Returned Params params are : " + retParams.toString());
+      }
+      catch (NullPointerException e) {
+          Log.v("infantium_easyNDK", "returned null params");
+      }
+      return retParams;
+  }
+  ``````````````````
 
 5. Add rights to the manifest:
 
@@ -57,15 +57,15 @@ public JSONObject infantium_easyNDK(JSONObject params) {
 
 8. Optionally for iOS stubs. Add method to RootViewController:
 
-``````````````````c++
-(NSObject *)infantium_easyNDK:(NSObject *)params {
-    NSLog(@"infantium_easyNDK call");
-    NSDictionary *parameters = (NSDictionary*) params;
-    NSLog(@"Passed params are : %@", parameters);
-
-    NSObject *retParams = [InfantiumBridge dispatchNDKCall:parameters];
-    NSLog(@"RetParams params are : %@", retParams);
-
-    return retParams;
-}
-``````````````````
+  ``````````````````c++
+  (NSObject *)infantium_easyNDK:(NSObject *)params {
+      NSLog(@"infantium_easyNDK call");
+      NSDictionary *parameters = (NSDictionary*) params;
+      NSLog(@"Passed params are : %@", parameters);
+  
+      NSObject *retParams = [InfantiumBridge dispatchNDKCall:parameters];
+      NSLog(@"RetParams params are : %@", retParams);
+  
+      return retParams;
+  }
+  ``````````````````
