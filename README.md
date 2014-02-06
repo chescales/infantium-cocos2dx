@@ -4,7 +4,7 @@ infantium-cocos2dx
 Dependencies:
 -------------
 
-This project requires the EasyNDK project to run. You can find it here: [EasyNDK repository](https://github.com/vedi/EasyNDK>)
+This project requires the EasyNDK project to run. You can find it here: [EasyNDK repository](https://github.com/vedi/EasyNDK)
 
 General info about the integration:
 -----------------------------------
